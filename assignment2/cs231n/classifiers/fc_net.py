@@ -282,7 +282,7 @@ class FullyConnectedNet(object):
             out, relu_cache = relu_forward(out)
             # drop_out
             if self.use_dropout:
-                out, dropout_cache = dropout_forward(
+                out, dp_cache = dropout_forward(
                     out, self.dropout_param)
             cache.append((a_cache, norm_cache, relu_cache, dp_cache))
         # the last affine layer
